@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multa</title>
+</head>
+<body>
+    <!-- //Construir uma página que leia a velocidade de um carro.
+        //Através de um SCRIPT, informe se ele foi ou não multado caso a velocidade seja superior a 110 Km/h.-->
+        <h1>Digite a sua velocidade em KM</h1>
+        <input type="number" name="velocidade" id="velocidade" required>
+        <input type="button" value="Calcular" onclick="multa()">
+        <div id="resultado">Resultado</div>
+        <script>
+    function multa() {
+        var Velocidade = document.getElementById('velocidade');
+
+        var Velocidade = Number(Velocidade.value);
+
+        var resultado = window.document.getElementById('resultado');
+
+        if (Velocidade >= 110) {
+                resultado.innerHTML = `<font color=red> Você será multado pelo excesso de velocidade </font>`;
+            }else{
+                resultado.innerHTML = `<font color=green> Você NÃO será multado pelo excesso de velocidade, parabéns </font>`;
+            }
+    }
+        </script>
+</body>
+</html>

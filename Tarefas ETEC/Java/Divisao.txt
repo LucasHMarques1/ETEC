@@ -1,0 +1,14 @@
+2.
+/*Faça um programa que receba dois números e exiba a divisão do primeiro pelo segundo*/
+package lição.pkg2;
+import javax.swing.JOptionPane;
+public class Lição2 {
+    public static void main(String[] args) {
+        int a = 0, b = 0;
+        double c = 0;
+       a = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número: "));
+       b = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo número: "));
+       c = a/b ;
+       JOptionPane.showMessageDialog(null, "O resultado da divisão é de: " + c ); 
+    }   
+}

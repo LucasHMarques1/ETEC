@@ -1,0 +1,21 @@
+7.
+package lição7;
+
+import javax.swing.JOptionPane;
+
+/* Uma revendedora de carros usados paga a seus vendedores um salário fixo por 
+mês, mais 5% do valor das vendas por ele efetuadas, mais um bônus que pode 
+variar a cada mês. Escrever um programa que leia o valor total de suas vendas 
+o bônus e o salário fixo. Calcule e escreva o salário final do vendedor. */
+public class Lição7 {
+
+    public static void main(String[] args) {
+      double vendas = Double.parseDouble(JOptionPane.showInputDialog(" Qual foi o valor total de suas vendas? "));
+      vendas = vendas * 0.05;
+      double bonus = Double.parseDouble(JOptionPane.showInputDialog(" Digite o valor do seu bônus"));
+      double salario = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do seu salário"));
+      double salariofinal = vendas + bonus + salario;
+      JOptionPane.showMessageDialog(null, "Seu salário final foi de R$" + salariofinal);
+    }
+    
+}

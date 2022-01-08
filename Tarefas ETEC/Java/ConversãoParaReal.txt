@@ -1,0 +1,17 @@
+package lição8;
+
+import javax.swing.JOptionPane;
+
+/*  Faça um programa que receba um montante em dólar, depois pergunte o 
+    valor do dólar. Apresente a conversão em reais. */
+public class Lição8 {
+
+    public static void main(String[] args) {
+       double dolar = Double.parseDouble(JOptionPane.showInputDialog("Digite seu valor em dolar US$ "));
+       double valordolar = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do dolar "));
+       double real = dolar * valordolar ;
+       JOptionPane.showMessageDialog(null, "Com a conversão você tem R$" + real);
+       
+    }
+    
+}

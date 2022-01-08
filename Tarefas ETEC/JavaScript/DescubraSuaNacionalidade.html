@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style type="text/css">
+        h1{
+            margin-left: 20px;
+        }
+        select{
+            width: 200px;
+            margin-left: 20px;
+        }
+        #resultado{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- //Construir uma página que leia a velocidade de um carro.
+        //Através de um SCRIPT, informe se ele foi ou não multado caso a velocidade seja superior a 110 Km/h.-->
+        <h1>Escolha seu país de origem</h1>
+        <select id="pais">
+            <option>Alemanha</option>
+            <option>Argentina</option>
+            <option>Brasil</option>
+            <option>EUA</option>
+            <option>Itália</option>
+        </select>
+
+        <input type="button" value="Pesquisar" onclick="pesquisar()">
+        <input type="button" value="Adicionar País" onclick="AdicionarPais()">
+        <div id="resultado">Sua Nacionalidade</div>
+
+        <script>
+    function AdicionarPais() {
+        var PaisNovo = window.prompt("Digite o país que deseja adicionar")
+        console.log(PaisNovo);
+        const select = document.querySelector('#pais'); //OBS: peguei ajuda da internet para fazer isso.
+        select.options[select.options.length] = new Option(PaisNovo);
+    }
+
+
+    function pesquisar() {
+    var select = document.getElementById('pais');
+	var pais = select.options[select.selectedIndex].text; //OBS: peguei ajuda da internet para fazer isso.
+
+    var resultado = window.document.getElementById('resultado');
+
+    if (pais == "Alemanha") {
+        resultado.innerHTML = "<font color=blue> Você é Alemão </font>";
+        }else if(pais == "Argentina"){
+            resultado.innerHTML = "<font color=blue> Você é Argentino </font>";
+        }
+            else if(pais == "Brasil"){
+                resultado.innerHTML = "<font color=blue> Você é Brasileiro </font>";
+            }
+                else{
+                    resultado.innerHTML = "<font color=blue> Você é Estrangeiro </font>";
+                }
+    }
+        </script>
+</body>
+</html>

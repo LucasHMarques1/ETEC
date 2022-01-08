@@ -1,0 +1,12 @@
+4.
+/* Faça um programa que receba o nome e sobrenome em duas variáveis diferentes 
+depois apresente o nome mais o sobrenome. */
+package lição4;
+import javax.swing.JOptionPane;
+public class Lição4 {
+    public static void main(String[] args) {
+     String nome = JOptionPane.showInputDialog("Digite seu nome");
+     String sobrenome = JOptionPane.showInputDialog("Digite seu nome");
+     JOptionPane.showMessageDialog(null, "Seu nome é " + nome + " " + sobrenome);
+    }   
+}

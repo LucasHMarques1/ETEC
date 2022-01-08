@@ -1,0 +1,25 @@
+package lição11;
+
+import javax.swing.JOptionPane;
+
+/* Ler o ano atual e o ano de nascimento de uma pessoa. Escrever uma mensagem 
+que diga se ela poderá ou não votar este ano (não é necessário considerar o  
+mês em que a pessoa nasceu).*/
+public class Lição11 {
+
+    public static void main(String[] args) {
+        int dia = Integer.parseInt(JOptionPane.showInputDialog("Digite o dia do seu nascimento: "));
+        int ano = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano do seu nascimento: "));
+        int idade = 2021 - ano;
+        if (idade >= 18){
+          JOptionPane.showMessageDialog(null, "Você já pode votar"); 
+    }
+        else if (idade >= 16 && idade <= 18){
+          JOptionPane.showMessageDialog(null, "Você já pode votar, mas NÃO é obrigatório ainda");   
+        }
+       else{
+           JOptionPane.showMessageDialog(null, "Você não precisa votar");
+       }
+    }
+    
+}

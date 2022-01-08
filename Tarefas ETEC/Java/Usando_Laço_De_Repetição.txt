@@ -1,0 +1,19 @@
+13.
+package lição13;
+
+import javax.swing.JOptionPane;
+
+/* Faça um programa que receba dois números e divida o primeiro pelo segundo. 
+O segundo número não pode ser 0. (Use laço de repetição, não precisa usar if).*/
+public class Lição13 {
+    
+    public static void main(String[] args) {
+        int num2 = 0;
+        int num1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número: "));
+        do{
+           num2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo número: "));    
+        }while (num2 == 0);
+        double resultado = num1 / num2;
+        JOptionPane.showMessageDialog(null,"O resultado da divisão foi " + num1 + " ÷ " + num2 + " = " + resultado);
+    }
+}

@@ -1,0 +1,13 @@
+3.
+/*Faça um programa que calcule a área de um triangulo. ((Base * Altura)/2). */
+package lição.pkg3;
+import javax.swing.JOptionPane;
+public class Lição3 {
+    public static void main(String[] args) {
+     double base = Double.parseDouble(JOptionPane.showInputDialog
+        ("Digite a base do triângulo: "));
+     double altura = Double.parseDouble(JOptionPane.showInputDialog
+        ("Digite a altura do triângulo: "));
+     double  area = (base * altura)/2; JOptionPane.showMessageDialog(null,"A área do triângulo é: " + area);
+    }  
+}

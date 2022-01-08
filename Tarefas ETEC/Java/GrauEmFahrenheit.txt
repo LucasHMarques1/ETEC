@@ -1,0 +1,16 @@
+package lição6;
+
+import javax.swing.JOptionPane;
+
+/* Faça um programa que para Ler uma temperatura em graus Celsius e apresentá-la
+ convertida em graus Fahrenheit. Formula: F=(9*C+160)/5
+ */
+public class Lição6 {
+
+    public static void main(String[] args) {
+      double celsius = Double.parseDouble(JOptionPane.showInputDialog("Digite a temperatura em Celsius para ser convertida"));
+      double fahrenheit = (9 * celsius + 160 ) / 5 ;
+      JOptionPane.showMessageDialog(null, "O resultado da sua conversão ficou " + fahrenheit + " graus Fahrenheit");
+    }
+    
+}

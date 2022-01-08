@@ -1,0 +1,20 @@
+package lição14;
+
+import javax.swing.JOptionPane;
+
+/* Escreva um programa para ler 3 notas escolares. E ao final apresentar
+a média simples.*/
+public class Lição14 {
+
+    public static void main(String[] args) {
+        int nota = 0;
+        double resultado = 0;
+       for (int i = 1; i <= 3 ; i ++){
+          nota = Integer.parseInt(JOptionPane.showInputDialog("Digite a "+ i +"º nota"));
+          resultado = resultado + nota;
+       }
+       resultado = resultado / 3;
+       JOptionPane.showMessageDialog(null,"Sua média final foi " + resultado);
+    }
+    
+}

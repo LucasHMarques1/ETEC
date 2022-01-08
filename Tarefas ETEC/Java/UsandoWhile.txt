@@ -1,0 +1,18 @@
+package lição12;
+
+import javax.swing.JOptionPane;
+
+/* Faça um programa que receba um número, enquanto esse número estiver 
+fora do intervalo entre 0 e 10 peça para o usuário digitar um número 
+entre esse intervalo. */
+public class Lição12 {
+
+    public static void main(String[] args) {
+        int numero = 100;
+        while (numero < 0 || numero > 10 ) {
+           numero = Integer.parseInt(JOptionPane.showInputDialog("Digite um número entre 0 e 10: "));     
+        }
+        JOptionPane.showMessageDialog(null, "Parabéns você digitou um número entre o intervalo de 0 a 10");
+    }
+    
+}

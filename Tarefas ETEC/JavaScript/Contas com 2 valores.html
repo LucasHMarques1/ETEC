@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 145px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+        <h1>SOMANDO VALORES</h1>
+        <input type="number" name="n1" id="n1"> +
+        <input type="number" name="n2" id="n2">
+        <input type="button" value="Somar" onclick="somar()">
+        <input type="button" value="Subtrair" onclick="subtrair()">
+        <input type="button" value="Multiplicar" onclick="multiplicar()">
+        <input type="button" value="Dividir" onclick="dividir()">
+        <input type="button" value="Potenciação" onclick="potencia()">
+
+        <div id="res">Resultado</div>  
+        <script>
+
+            //Somar os números
+            function somar(){
+                var tn1 = window.document.getElementById('n1');
+                var tn2 = window.document.querySelector('input#n2');
+
+                var res = window.document.getElementById('res');
+
+                var n1 = Number(tn1.value);
+                var n2 = Number(tn2.value);
+                var s  = n1 + n2;
+
+                res.innerHTML = `A Soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+            }
+
+            //Subtrair os números
+            function subtrair(){
+                var tn1 = window.document.getElementById('n1');
+                var tn2 = window.document.querySelector('input#n2');
+
+                var res = window.document.getElementById('res');
+
+                var n1 = Number(tn1.value);
+                var n2 = Number(tn2.value);
+                var s  = n1 - n2;
+
+                res.innerHTML = `A Subtração entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+            }
+
+            //Multiplicar os números
+            function multiplicar(){
+                var tn1 = window.document.getElementById('n1');
+                var tn2 = window.document.querySelector('input#n2');
+
+                var res = window.document.getElementById('res');
+
+                var n1 = Number(tn1.value);
+                var n2 = Number(tn2.value);
+                var s  = n1 * n2;
+
+                res.innerHTML = `A Multiplicação entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+            }
+
+            //Dividir os números
+            function dividir(){
+                var tn1 = window.document.getElementById('n1');
+                var tn2 = window.document.querySelector('input#n2');
+
+                var res = window.document.getElementById('res');
+
+                var n1 = Number(tn1.value);
+                var n2 = Number(tn2.value);
+                var s  = n1 / n2;
+
+                res.innerHTML = `A Divisão entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+            }
+
+            //Potencialização dos números
+            function potencia(){
+                var tn1 = window.document.getElementById('n1');
+                var tn2 = window.document.querySelector('input#n2');
+
+                var res = window.document.getElementById('res');
+
+                var n1 = Number(tn1.value);
+                var n2 = Number(tn2.value);
+                var s  = n1 ** n2; //ou Math.pow(base, expoente)
+
+                res.innerHTML = `A Potencia de ${n1} elevado á ${n2} é igual a <strong>${s}</strong>`;
+            }
+
+        </script>
+</body>
+</html>

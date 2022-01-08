@@ -1,0 +1,23 @@
+9.
+package lição9;
+
+import javax.swing.JOptionPane;
+
+/* Ler um valor e escrever a mensagem É MAIOR QUE 10! se o valor lido for 
+    maior que 10, caso contrário escrever NÃO É MAIOR QUE 10!*/
+public class Lição9 {
+
+    public static void main(String[] args) {
+        int valor = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor: "));
+        if (valor > 10){
+          JOptionPane.showMessageDialog(null, "É MAIOR QUE 10");
+        }
+        else if (valor < 10){
+           JOptionPane.showMessageDialog(null, "NÃO É MAIOR QUE 10"); 
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "É IGUAL A 10");
+        }
+    }
+    
+}

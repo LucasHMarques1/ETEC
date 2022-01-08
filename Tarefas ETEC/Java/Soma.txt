@@ -1,0 +1,13 @@
+1.
+/*Faça um programa que receba dois números e mostre a soma deles*/
+package lição1;
+import javax.swing.JOptionPane;
+public class Lição1 {
+    public static void main(String[] args) {
+  int a = 0, b = 0, Soma = 0;
+  a = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite um número:"));
+  b = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite outro número:"));
+  Soma = a + b ;
+  JOptionPane.showMessageDialog(null, "Seu resultado é: " + Soma );
+  }
+    }

@@ -1,0 +1,19 @@
+package lição10;
+
+import javax.swing.JOptionPane;
+
+/* Ler um valor e escrever se é positivo ou negativo (considere o valor zero como positivo).
+ */
+public class Lição10 {
+
+    public static void main(String[] args) {
+       int valor = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor: "));
+       if (valor >= 0){
+          JOptionPane.showMessageDialog(null, "NÚMERO POSITIVO"); 
+    }
+       else{
+           JOptionPane.showMessageDialog(null, "NÚMERO NEGATIVO");
+       }
+    
+}
+}
